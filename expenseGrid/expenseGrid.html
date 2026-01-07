@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Dashboard — Grid</title>
+    <link rel="stylesheet" href="expense.css">
+    <link rel="stylesheet" href="expenseGrid.css">
+</head>
+<body>
+  <div class="container">
+    <section class="grid-dashboard">
+      <article class="card">
+        <h3>Total Expenses</h3>
+        <div class="meta">This month</div>
+        <div class="amount">$1,240.50</div>
+      </article>
+
+      <article class="card">
+        <h3>By Category</h3>
+        <ul class="category-list">
+          <li>Food <span class="amount">$420.00</span></li>
+          <li>Transport <span class="amount">$120.00</span></li>
+          <li>Utilities <span class="amount">$200.00</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Add Expense</h3>
+        <form class="add-expense" onsubmit="event.preventDefault(); alert('Expense added (demo)');">
+          <input type="text" placeholder="Description" required />
+          <input type="number" step="0.01" placeholder="Amount" required />
+          <button type="submit">Add</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Recent Transactions</h3>
+        <ul class="transactions">
+          <li>Groceries — <span class="amount">$54.20</span></li>
+          <li>Bus ticket — <span class="amount">$2.50</span></li>
+          <li>Electric bill — <span class="amount">$60.00</span></li>
+        </ul>
+      </article>
+    </section>
+  </div>
+    
+</body>
+</html>

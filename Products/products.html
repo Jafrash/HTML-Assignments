@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <title>Products</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Products</h1>
+        <p>Welcome to our product page.Look into the products below</p>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="brand">
+                    <a href="#" class="logo">Phone<span>Shop</span></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#products">Products</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <button id="cart-btn" aria-label="Open cart">🛒 <span id="cart-count">0</span></button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Discover your next phone</h1>
+                <p>Handpicked phones for every budget — fast shipping, secure payments.</p>
+                <a href="#products" class="cta">Shop now</a>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+
+            <div class="product" data-name="Apple iPhone" data-price="799">
+                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6487/6487403_sd.jpg" alt="Apple iPhone" />
+                <span class="badge hot">Best seller</span>
+                <h2>Apple iPhone</h2>
+                <p class="description">The latest iPhone with A15 Bionic chip, 6.1" OLED display, and advanced dual-camera system.</p>
+                <p class="price">$799</p>
+                <button class="add-to-cart" aria-label="Add Apple iPhone to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Samsung Galaxy" data-price="999">
+                <img src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/gallery/Red/1.jpg" alt="Samsung Galaxy" />
+                <span class="badge new">New</span>
+                <h2>Samsung Galaxy</h2>
+                <p class="description">Premium Galaxy phone with 6.8" Dynamic AMOLED display, powerful camera array, and long-lasting battery.</p>
+                <p class="price">$999</p>
+                <button class="add-to-cart" aria-label="Add Samsung Galaxy to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Oppo" data-price="449">
+                <img src="https://media.ldlc.com/r1600/ld/products/00/05/97/09/LD0005970963.jpg" alt="Oppo" />
+                <span class="badge sale">-20%</span>
+                <h2>Oppo</h2>
+                <p class="description">Feature-packed Oppo with fast charging, solid camera performance and a crisp display for everyday use.</p>
+                <p class="price">$449</p>
+                <button class="add-to-cart" aria-label="Add Oppo to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Vivo" data-price="399">
+                <img src="https://asia-exshopstatic-vivofs.vivo.com/KuCZNhz3cVxH4yrP/my/1730884865876/5d2692d3872fb9b3b0415d7d8f8ecf54.png_w860-h860.png" alt="Vivo" />
+                <span class="badge">Popular</span>
+                <h2>Vivo</h2>
+                <p class="description">Affordable Vivo with a large display, smooth performance, and a reliable camera for everyday photos.</p>
+                <p class="price">$399</p>
+                <button class="add-to-cart" aria-label="Add Vivo to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Mi" data-price="299">
+                <img src="https://techcart.com.au/wp-content/uploads/2022/05/64593-Xiaomi-Mi-12-Pro-5G-256GB8-Gray-Global-Version.png" alt="Mi" />
+                <span class="badge">Popular</span>
+                <h2>Mi</h2>
+                <p class="description">Mi phone offering great value—fast processor, reliable battery life, and clean software experience.</p>
+                <p class="price">$299</p>
+                <button class="add-to-cart" aria-label="Add Mi to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Nokia" data-price="179">
+                <img src="https://images.ctfassets.net/wcfotm6rrl7u/1zhzypQGQ61oLNYVCkGFJG/358f274cbd3fcd55f086224e403690a0/nokia-105-charcoal-front-int.png?w=1205&h=1205&f=center&fit=pad&q=88" alt="Nokia" />
+                <span class="badge">Popular</span>
+                <h2>Nokia</h2>
+                <p class="description">Durable Nokia with a focus on battery life and a clean, simple interface.</p>
+                <p class="price">$179</p>
+                <button class="add-to-cart" aria-label="Add Nokia to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Redmi" data-price="249">
+                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666350286.66957501.png" alt="Redmi" />
+                <span class="badge">Popular</span>
+                <h2>Redmi</h2>
+                <p class="description">Redmi offers strong specs for the price—great display and capable camera system.</p>
+                <p class="price">$249</p>
+                <button class="add-to-cart" aria-label="Add Redmi to cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-name="Realme" data-price="279">
+                <img src="https://image01.realme.net/general/20250115/1736915111985caaf5313b5cf46d2935ae18d7a8e1d9f.png?width=1440&height=1440&size=1481282" alt="Realme" />
+                <span class="badge">Popular</span>
+                <h2>Realme</h2>
+                <p class="description">Realme combines performance and style—fast charging, responsive UI, and a bright display.</p>
+                <p class="price">$279</p>
+                <button class="add-to-cart" aria-label="Add Realme to cart">Add to Cart</button>
+            </div>
+
+
+        </section>
+        
+
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart" aria-label="Close cart">Close</button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cart-total">0</span></div>
+        <button id="checkout-btn" class="primary">Checkout</button>
+      </div>
+    </aside>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cartBtn = document.getElementById('cart-btn');
+        const closeCart = document.getElementById('close-cart');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartCount = document.getElementById('cart-count');
+        const cartItemsEl = document.querySelector('.cart-items');
+        const cartTotalEl = document.getElementById('cart-total');
+        const checkoutBtn = document.getElementById('checkout-btn');
+
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+        function save() { localStorage.setItem('cart', JSON.stringify(cart)); }
+        function updateCount(){ const total = cart.reduce((s,i)=> s + i.qty, 0); cartCount.innerText = total; }
+        function renderCart(){
+          cartItemsEl.innerHTML = '';
+          let total = 0;
+          if(cart.length===0){ cartItemsEl.innerHTML = '<p>Your cart is empty.</p>' }
+          cart.forEach(item =>{
+            total += item.price * item.qty;
+            const div = document.createElement('div');
+            div.className = 'cart-item';
+            div.innerHTML = `<div><div class="name">${item.name}</div><div class="muted">Qty: ${item.qty}</div></div><div>$${(item.price*item.qty).toFixed(2)} <button data-name="${item.name}" class="remove">Remove</button></div>`;
+            cartItemsEl.appendChild(div);
+          });
+          cartTotalEl.innerText = total.toFixed(2);
+          Array.from(document.querySelectorAll('.remove')).forEach(btn => {
+            btn.addEventListener('click', () => {
+              const name = btn.dataset.name;
+              cart = cart.filter(i => i.name !== name);
+              save(); updateCount(); renderCart();
+            });
+          });
+        }
+
+        function openCart(){ cartDrawer.classList.add('open'); cartDrawer.setAttribute('aria-hidden','false'); cartOverlay.hidden = false; cartOverlay.style.opacity = '1'; }
+        function closeCartFn(){ cartDrawer.classList.remove('open'); cartDrawer.setAttribute('aria-hidden','true'); cartOverlay.style.opacity = '0'; setTimeout(()=> cartOverlay.hidden = true, 250); }
+
+        document.querySelectorAll('.add-to-cart').forEach(btn =>{
+          btn.addEventListener('click', () =>{
+            const card = btn.closest('.product');
+            const name = card.dataset.name || card.querySelector('h2')?.innerText;
+            const price = Number(card.dataset.price || (card.querySelector('.price')?.innerText || '').replace(/[^0-9.]/g,'')) || 0;
+            const found = cart.find(i => i.name === name);
+            if(found) found.qty += 1; else cart.push({name, price, qty:1});
+            save(); updateCount(); renderCart(); openCart();
+          });
+        });
+
+        cartBtn.addEventListener('click', openCart);
+        closeCart.addEventListener('click', closeCartFn);
+        cartOverlay.addEventListener('click', closeCartFn);
+        checkoutBtn.addEventListener('click', () => alert('Checkout not implemented in this demo.'));
+
+        // init
+        updateCount(); renderCart();
+      });
+    </script>
+</body>
+</html>

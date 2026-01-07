@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmhouse</title>
+    <link rel="stylesheet" href="farmhouse.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Funny Farmhouse</h1>
+      <p>Book a relaxing stay or plan your special event with us.</p>
+    </header>
+
+    <main class="main">
+      <section class="content card">
+        <h2 style="margin:0 0 0.5rem 0;">Booking form</h2>
+        <form action="#" method="post" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Mobile number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Enter mobile number" required>
+            </div>
+
+            <div class="field">
+              <label for="guests">Number of guests</label>
+              <input id="guests" name="guests" type="number" min="1" max="50" required>
+            </div>
+
+            <div class="field">
+              <label for="checkin">Check-in date</label>
+              <input id="checkin" name="checkin" type="date" required>
+            </div>
+
+            <div class="field">
+              <label for="checkout">Check-out date</label>
+              <input id="checkout" name="checkout" type="date" required>
+            </div>
+
+            <div class="full">
+              <label for="purpose">Purpose of booking</label>
+              <select id="purpose" name="purpose" required>
+                <option value="">Select</option>
+                <option>Family Stay</option>
+                <option>Birthday Party</option>
+                <option>Wedding Event</option>
+                <option>Corporate Event</option>
+                <option>Others</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label for="notes">Additional requirements</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Any special requests..."></textarea>
+            </div>
+
+          </div>
+
+          <div class="button-row">
+            <button type="reset" class="btn btn-ghost">Reset</button>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3 style="margin:0 0 0.5rem 0;">Farmhouse location</h3>
+          <div class="map-wrap">
+            <iframe src="https://maps.app.goo.gl/mh25HybV1SVsJcNX8" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <p style="color:#6b7280; margin-top:0.6rem; font-size:0.9rem;">Prefer to chat? Click the WhatsApp button in the corner.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/7013291919" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</body>
+</html>
