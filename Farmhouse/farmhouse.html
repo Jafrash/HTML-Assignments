@@ -87,5 +87,97 @@
   </div>
 
   <a class="whatsapp-btn" href="https://wa.me/7013291919" target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+  <script>
+    // Constants
+    const BASE_PRICE = 20000; // price per day for up to BASE_PEOPLE
+    const TAX_RATE = 0.18; // 18% tax
+    const EXTRA_PERSON_RATE = 0.10; // 10% increment per extra person (applied on subtotal)
+    const BASE_PEOPLE = 4; // included people without extra charge
+
+    // Function to calculate total amount
+    function calculateTotalAmount(days, people) {
+      // Ensure days and people are at least 1
+      days = Math.max(1, Number(days));
+      people = Math.max(1, Number(people));
+
+      // Subtotal for the stay (base price * days)
+      let subtotal = BASE_PRICE * days;
+
+      // Extra person calculation (10% of subtotal per extra person)
+      let extraCharge = 0;
+      if (people > BASE_PEOPLE) {
+        const extraPeople = people - BASE_PEOPLE;
+        extraCharge = subtotal * EXTRA_PERSON_RATE * extraPeople;
+      }
+
+      const totalBeforeTax = subtotal + extraCharge;
+      const taxAmount = totalBeforeTax * TAX_RATE;
+      const finalAmount = totalBeforeTax + taxAmount;
+
+      return {
+        subtotal,
+        extraCharge,
+        totalBeforeTax,
+        taxAmount,
+        finalAmount
+      };
+    }
+
+    // DOM: we'll show a summary panel after the booking form
+    (function attachFormHandler() {
+      const form = document.querySelector('form');
+      if (!form) return;
+
+      const resultEl = document.createElement('div');
+      resultEl.id = 'booking-result';
+      resultEl.className = 'card';
+      resultEl.style.marginTop = '1rem';
+
+      // Insert the result panel right after the form
+      form.parentNode.insertBefore(resultEl, form.nextSibling);
+
+      function renderResult(data, name, daysVal, peopleVal) {
+        resultEl.innerHTML = `
+          <h3 style="margin:0 0 0.5rem 0;">Booking Summary</h3>
+          <p><strong>Customer:</strong> ${name || '—'}</p>
+          <p><strong>Days:</strong> ${daysVal}</p>
+          <p><strong>People:</strong> ${peopleVal}</p>
+          <p><strong>Base (subtotal):</strong> ₹${data.subtotal.toLocaleString()}</p>
+          <p><strong>Extra charge:</strong> ₹${data.extraCharge.toLocaleString()}</p>
+          <p><strong>Total before tax:</strong> ₹${data.totalBeforeTax.toLocaleString()}</p>
+          <p><strong>Tax (18%):</strong> ₹${data.taxAmount.toLocaleString()}</p>
+          <p><strong>Final Amount:</strong> ₹${data.finalAmount.toLocaleString()}</p>
+        `;
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const guests = parseInt(document.getElementById('guests').value, 10) || BASE_PEOPLE;
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+
+        // Derive number of days from dates when possible
+        let daysCount = 1;
+        if (checkin && checkout) {
+          const d1 = new Date(checkin);
+          const d2 = new Date(checkout);
+          const diff = Math.ceil((d2 - d1) / (1000 * 60 * 60 * 24));
+          daysCount = diff > 0 ? diff : 1;
+        }
+
+        const bill = calculateTotalAmount(daysCount, guests);
+        renderResult(bill, name, daysCount, guests);
+        console.log('Booking:', { name, days: daysCount, guests, bill });
+      });
+
+      // Seed an example: 1 day, 5 people (1 extra) as requested. This will render on page load.
+      document.getElementById('guests').value = 5;
+      const exampleBill = calculateTotalAmount(1, 5);
+      renderResult(exampleBill, 'Jafrash', 1, 5);
+      console.log('Example bill for 1 day & 5 people:', exampleBill);
+    })();
+  </script>
 </body>
 </html>
